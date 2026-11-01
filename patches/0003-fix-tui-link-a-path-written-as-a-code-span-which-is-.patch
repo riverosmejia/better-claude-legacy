@@ -1,7 +1,7 @@
 From 1c2de69628471fa7948024615d62f55f76af939a Mon Sep 17 00:00:00 2001
 From: riverosmejia <riverosmejia@users.noreply.github.com>
 Date: Sun, 1 Nov 2026 15:53:16 -0500
-Subject: [PATCH 3/4] fix(tui): link a path written as a code span, which is
+Subject: [PATCH 3/5] fix(tui): link a path written as a code span, which is
  the usual shape
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8

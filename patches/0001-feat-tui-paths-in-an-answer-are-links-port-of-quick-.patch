@@ -1,7 +1,7 @@
 From abb8b3809fb7054079741fdfd965e5181535b477 Mon Sep 17 00:00:00 2001
 From: riverosmejia <riverosmejia@users.noreply.github.com>
 Date: Sun, 1 Nov 2026 15:28:39 -0500
-Subject: [PATCH 1/4] feat(tui): paths in an answer are links (port of
+Subject: [PATCH 1/5] feat(tui): paths in an answer are links (port of
  quick-peek's paths)
 
 A path the model names in prose that resolves to a real file becomes a Link:

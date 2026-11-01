@@ -1,7 +1,7 @@
 From fcabfb9639512d67f6b3cbea25faeb5dfaa70397 Mon Sep 17 00:00:00 2001
 From: riverosmejia <riverosmejia@users.noreply.github.com>
 Date: Sun, 1 Nov 2026 15:39:38 -0500
-Subject: [PATCH 2/4] fix(tui): a click on a path shows the file, instead of
+Subject: [PATCH 2/5] fix(tui): a click on a path shows the file, instead of
  silently copying it
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8

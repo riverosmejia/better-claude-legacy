@@ -1,0 +1,23 @@
+From 035e985075bc1b661ea45ca98ab5d3493c94ec4a Mon Sep 17 00:00:00 2001
+From: riverosmejia <riverosmejia@users.noreply.github.com>
+Date: Sun, 1 Nov 2026 16:11:37 -0500
+Subject: [PATCH 5/5] docs(tui): credit midudev's quick-peek without naming its
+ marketplace
+
+---
+ ui-tui/src/lib/paths.ts | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/ui-tui/src/lib/paths.ts b/ui-tui/src/lib/paths.ts
+index 2bf2bd161a5..caa1ddba663 100644
+--- a/ui-tui/src/lib/paths.ts
++++ b/ui-tui/src/lib/paths.ts
+@@ -4,7 +4,7 @@ import { homedir } from 'node:os'
+ /**
+  * Finding the paths a text names, and which of them lead somewhere.
+  *
+- * Port of `hooks/paths.ts` from quick-peek (midudev/better-claude, MIT) to the
++ * Port of `hooks/paths.ts` from midudev's quick-peek (MIT) to the
+  * TUI, so a path in an answer can become a link instead of staying plain text.
+  * The rules are the original's: absolute, from home, relative, bare, each with
+  * an optional `:line` or `:line:col`; addresses are never paths.

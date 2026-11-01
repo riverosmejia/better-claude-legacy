@@ -1,7 +1,7 @@
 From 9d35e9657a25fd4cf5ca5588cb4ac5089cc9dbbb Mon Sep 17 00:00:00 2001
 From: riverosmejia <riverosmejia@users.noreply.github.com>
 Date: Sun, 1 Nov 2026 16:01:55 -0500
-Subject: [PATCH 4/4] feat(tui): a hovered path draws its file in a corner card
+Subject: [PATCH 4/5] feat(tui): a hovered path draws its file in a corner card
  (Nivel 3)
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
