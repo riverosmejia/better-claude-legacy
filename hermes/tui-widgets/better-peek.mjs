@@ -68,9 +68,10 @@ export default function register(sdk) {
       list(first => {
         if (!target) return show(first)
         const pick = /^\d+$/.test(target) ? Number(target) - 1 : first.hits.findIndex(hit => hit.label === target || hit.path === target)
-        if (pick < 0 || pick >= first.hits.length) return show({ ...first, note: `no está: ${target}` })
-        run(['--session', session || '', '--rows', String(ROWS), String(pick + 1)], (error, out) => {
-          show({ ...first, index: pick, view: 'card', lines: error ? [error] : out.replace(/\n$/, '').split('\n') })
+        // A path that is not in the list is still peekable: the CLI takes it as its target.
+        const ask = pick >= 0 ? String(pick + 1) : target
+        run([ask, '--rows', String(ROWS)], (error, out) => {
+          show({ ...first, index: Math.max(0, pick), view: 'card', lines: error ? [error] : out.replace(/\n$/, '').split('\n') })
         })
       })
       return state
