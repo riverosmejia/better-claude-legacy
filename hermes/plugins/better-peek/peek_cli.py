@@ -93,11 +93,11 @@ def card(hit: Hit, rows: int = ROWS) -> str:
         return f"{hit.path}\nnot there"
     if os.path.isdir(hit.path):
         try:
-            entries = sorted(os.listdir(hit.path))[:rows]
+            entries = sorted(name for name in os.listdir(hit.path) if name not in ("__pycache__", ".git"))
         except OSError:
             entries = []
-        body = "\n".join(f"  {name}" for name in entries) or "  (empty)"
-        return f"{os.path.basename(hit.path) or hit.path}/  dir, {len(entries)} shown\n{body}"
+        body = "\n".join(f"  {name}" for name in entries[:rows]) or "  (empty)"
+        return f"{os.path.basename(hit.path) or hit.path}/  dir, {min(len(entries), rows)} shown\n{body}"
 
     head = f"{os.path.basename(hit.path)}  {size_of(stat.st_size)}, {ago(stat.st_mtime)}"
     language = language_of(hit.path)
